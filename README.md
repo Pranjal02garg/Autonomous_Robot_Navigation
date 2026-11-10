@@ -209,34 +209,3 @@ Output PDF is saved at: `report/project_report.pdf`.
 | **Collision Episode Rate (%)** | 0.0% | **0.0%** | **0.0%** |
 
 Both trained agents achieve zero collisions and discover the theoretical geodesic shortest path of 18 steps from $(0, 0)$ to $(9, 9)$.
-
----
-
-## 6. Course Alignment (UCS760)
-
-| Course Topic | Project Implementation Reference |
-| :--- | :--- |
-| **Reinforcement Learning Formulation** | Markov Decision Process formalization in `environment/gridworld.py` |
-| **State & Action Spaces** | Discrete 2D Cartesian grid coordinates and 4-action cardinal kinematics |
-| **Reward Engineering** | Goal incentive (+100), step penalty (-1), and collision penalty (-50) |
-| **Temporal-Difference Learning** | Tabular TD(0) value updates implemented from first principles in NumPy |
-| **Off-Policy TD Control** | Watkins' Q-Learning using Bellman optimality operator in `algorithms/q_learning.py` |
-| **On-Policy TD Control** | Rummery & Niranjan's SARSA using sampled behavioral action in `algorithms/sarsa.py` |
-| **Exploration vs Exploitation** | $\epsilon$-greedy action selection with exponential decay ($1.0 \to 0.01$) |
-| **Simulation-Based Robotics** | Real-time Pygame graphical dashboard with obstacle physics and telemetry |
-| **Experimental Evaluation** | Multi-seed robustness (5 seeds), 7 structured experiments, 140k+ row datasets |
-
----
-
-## 7. Submission Checklist & Verification
-
-- [x] Full source code adhering to clean PEP 8 modular Python standards.
-- [x] Manual NumPy implementation of Q-Learning and SARSA (no blackbox libraries).
-- [x] Gymnasium-style discrete 2D GridWorld with 4 diverse layout topologies.
-- [x] Breadth-First Search (BFS) optimal baseline pathfinder.
-- [x] Interactive Pygame simulator with 4 demonstration modes and live HUD.
-- [x] Genuine simulation datasets (`q_learning_training.csv`, `sarsa_training.csv`, etc.).
-- [x] All 8 experimental plots generated and saved as high-resolution PNGs.
-- [x] All 16 automated pytest unit tests passing cleanly.
-- [x] Complete 25-section academic report in Markdown and PDF.
-- [x] Complete 16-slide university presentation deck and viva preparation guide.
