@@ -1,0 +1,18 @@
+parameter,value,description
+grid_width,10,Horizontal dimension of the grid
+grid_height,10,Vertical dimension of the grid
+start_pos,"(0, 0)","Initial robot spawn position (x, y)"
+goal_pos,"(9, 9)","Target destination position (x, y)"
+obstacle_count,17,Total number of static obstacles
+obstacles,"2,1;2,2;2,3;2,4;5,3;6,3;7,3;4,5;4,6;4,7;6,6;7,6;7,7;7,8;1,7;2,7;3,7",Coordinates of blocked cells
+max_steps,200,Maximum steps allowed per episode
+goal_reward,100.0,Scalar reward on reaching goal cell
+obstacle_penalty,-50.0,Penalty upon attempting to enter obstacle
+boundary_penalty,-50.0,Penalty upon attempting to exit grid
+step_penalty,-1.0,Standard step cost encouraging shorter paths
+learning_rate_alpha,0.1,Temporal-difference step size
+discount_factor_gamma,0.95,Future reward discount factor
+epsilon_start,1.0,Initial exploratory probability
+epsilon_min,0.01,Minimum exploratory probability floor
+epsilon_decay,0.995,Multiplicative decay factor per episode
+episodes,3000,Standard training episodes count
